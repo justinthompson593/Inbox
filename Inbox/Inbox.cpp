@@ -92,10 +92,6 @@ void Inbox::message(){
 	//	outName="$outName${sender:$i:1}"
 	//	fi
 	//	done
-	//
-	//
-	//	dt=$(date '+%Y/%m/%d_%H:%M:%S')
-	//	mv msg.asc "$outName_on_$dt.txt.asc"
-	
+
 }
 
