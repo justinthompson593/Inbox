@@ -23,7 +23,7 @@ void Inbox::pushChanges(){
 
 
 bool Inbox::checkContactsForEmailAddress(string email){
-	ifstream contax("contacts.txt");
+	ifstream contax("Contacts/contacts.txt");
 	if(contax.fail()){
 		cout << "ERROR: Inbox::checkEmails(" << email << "):  Cannot find contacts.txt" << endl;
 		return false;
@@ -79,12 +79,18 @@ void Inbox::message(){
 	cout << "email from " << emailPref << "@" << emailSuff << endl;
 	
 	//	system("thisDate=$(date '+%Y/%m/%d_%H:%M:%S')");
-	sprintf(toSys, "mv tmpMsg.asc %s_$(date '+%sY-%sm-%sd_%sH:%sM:%sS').txt.asc", emailPref.c_str(), "%", "%", "%", "%", "%", "%");
+	sprintf(toSys, "mv tmpMsg.asc %s_$(date '+%sY-%sm-%sd_%sH.%sM.%sS').txt.asc", emailPref.c_str(), "%", "%", "%", "%", "%", "%");
 	system(toSys);
 	
 	
 	if(!checkContactsForEmailAddress(sndEmail)){	// if they're not in contacts.txt
+		fstream contax;
+		contax.open("Contacts/contacts.txt", ios::app);
+		if(contax.is_open()){
+			contax << sndEmail << endl;
+		}
 		
+		contax.close();
 	}
 	
 	

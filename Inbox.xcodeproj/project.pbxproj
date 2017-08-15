@@ -28,6 +28,9 @@
 		6C8975F51F43A1B800DF1B29 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6C8975FC1F43A45A00DF1B29 /* Inbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inbox.cpp; sourceTree = "<group>"; };
 		6C8975FD1F43A45A00DF1B29 /* Inbox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Inbox.hpp; sourceTree = "<group>"; };
+		6C8976001F43AF5900DF1B29 /* Contacts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Contacts; sourceTree = "<group>"; };
+		6C8976011F43AF5900DF1B29 /* Open */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Open; sourceTree = "<group>"; };
+		6C8976021F43AF5900DF1B29 /* Saved */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Saved; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +64,11 @@
 			isa = PBXGroup;
 			children = (
 				6C8975F51F43A1B800DF1B29 /* main.cpp */,
-				6C8975FC1F43A45A00DF1B29 /* Inbox.cpp */,
 				6C8975FD1F43A45A00DF1B29 /* Inbox.hpp */,
+				6C8975FC1F43A45A00DF1B29 /* Inbox.cpp */,
+				6C8976001F43AF5900DF1B29 /* Contacts */,
+				6C8976011F43AF5900DF1B29 /* Open */,
+				6C8976021F43AF5900DF1B29 /* Saved */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
