@@ -7,9 +7,17 @@
 //
 
 #include <iostream>
+#include "Inbox.hpp"
+
+using namespace std;
+
+Inbox In("justinthompson593@gmail.com");
 
 int main(int argc, const char * argv[]) {
-	// insert code here...
-	std::cout << "Hello, World!\n";
+
+	cout << "sup worl?" << endl;
+	
+	In.message();
+
 	return 0;
 }
