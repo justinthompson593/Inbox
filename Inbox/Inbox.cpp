@@ -61,7 +61,7 @@ void Inbox::message(){
 	
 	system("clear");
 	
-	cout << "\n\n\n\n\n\n\nPrepare to write email\n\n\tTo: " << userEmail << "\n\tFrom: " << sndEmail << endl;
+	cout << "\n\n\n\n\n\n\nPrepare to write email to " << userEmail << "from " << sndEmail << endl;
 	
 	system("sleep 2");
 	system("clear");
@@ -81,6 +81,13 @@ void Inbox::message(){
 	//	system("thisDate=$(date '+%Y/%m/%d_%H:%M:%S')");
 	sprintf(toSys, "mv tmpMsg.asc %s_$(date '+%sY-%sm-%sd_%sH:%sM:%sS').txt.asc", emailPref.c_str(), "%", "%", "%", "%", "%", "%");
 	system(toSys);
+	
+	
+	if(!checkContactsForEmailAddress(sndEmail)){	// if they're not in contacts.txt
+		
+	}
+	
+	
 	
 	//
 	//	sender="$1"
