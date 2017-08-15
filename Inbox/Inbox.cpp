@@ -74,9 +74,9 @@ void Inbox::message(){
 	
 	size_t idx = sndEmail.find("@");
 	string emailPref = sndEmail.substr(0,idx);
-	string emailSuff = sndEmail.substr(idx+1);
+//	string emailSuff = sndEmail.substr(idx+1);
 	
-	cout << "email from " << emailPref << "@" << emailSuff << endl;
+//	cout << "email from " << emailPref << "@" << emailSuff << endl;
 	
 	//	system("thisDate=$(date '+%Y/%m/%d_%H:%M:%S')");
 	sprintf(toSys, "mv tmpMsg.asc %s_$(date '+%sY-%sm-%sd_%sH.%sM.%sS').txt.asc", emailPref.c_str(), "%", "%", "%", "%", "%", "%");
