@@ -1,4 +1,4 @@
-//#define EMAIL "justinthompson593@gmail.com"
+#define EMAIL "justinthompson593@gmail.com"
 //
 //  main.cpp
 //  Inbox
@@ -24,7 +24,14 @@ int main(int argc, const char * argv[]) {
 		
 		if( strncmp(argv[i], "-g", 2) == 0 || strncmp(argv[i], "-get-msg", 8) == 0 )
 			In.getMessages();
+		
+		if( strncmp(argv[i], "-o", 2) == 0 || strncmp(argv[i], "-open", 5) == 0 ){
+			In.getMessages();
+			In.openMessages();
+			
+		}
 	}
 
 	return 0;
+
 }

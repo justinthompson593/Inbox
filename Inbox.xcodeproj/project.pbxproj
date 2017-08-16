@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C8975F61F43A1B800DF1B29 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C8975F51F43A1B800DF1B29 /* main.cpp */; };
 		6C8975FE1F43A45A00DF1B29 /* Inbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6C8975FC1F43A45A00DF1B29 /* Inbox.cpp */; };
+		6C8976041F43CC0800DF1B29 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6C8976031F43CC0800DF1B29 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		6C8976001F43AF5900DF1B29 /* Contacts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Contacts; sourceTree = "<group>"; };
 		6C8976011F43AF5900DF1B29 /* Open */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Open; sourceTree = "<group>"; };
 		6C8976021F43AF5900DF1B29 /* Saved */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Saved; sourceTree = "<group>"; };
+		6C8976031F43CC0800DF1B29 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		6C8975E91F43A1B800DF1B29 = {
 			isa = PBXGroup;
 			children = (
+				6C8976031F43CC0800DF1B29 /* README.md */,
 				6C8975F41F43A1B800DF1B29 /* Inbox */,
 				6C8975F31F43A1B800DF1B29 /* Products */,
 			);
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8976041F43CC0800DF1B29 /* README.md in Sources */,
 				6C8975FE1F43A45A00DF1B29 /* Inbox.cpp in Sources */,
 				6C8975F61F43A1B800DF1B29 /* main.cpp in Sources */,
 			);

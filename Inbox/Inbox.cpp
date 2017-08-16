@@ -47,8 +47,30 @@ void Inbox::getMessages(){
 	
 	system("mv *.asc Open");
 	system("for f in Open/*.asc; do gpg $f; done");
+}
+
+void Inbox::openMessages(){
+	system("open Open/*.txt");
 	
+	cout << "When you're done reading, enter s to save the .txt messages, or any other key to delete them: ";
+	string usrIn;
+	cin >> usrIn;
+	if( usrIn.compare("s") != 0 ){
+		system("rm Open/*.txt && echo \"Messages deleted\"");
+	}
+	else{
+		system("echo -e \"Saving:\n\n$(ls Open/*.txt)\n\nin $PWD/Open/\n\"");
+	}
 	
+	cout << "Enter s to save the .asc files: ";
+	cin >> usrIn;
+	
+	if(usrIn.compare("s") == 0){
+		system("mv Open/*.asc Saved && echo -e \"Saving:\n\n$(ls Saved/*.txt)\n\nin $PWD/Saved/\n\"");
+	}
+	else{
+		system("rm Open/*.asc && echo \"Files deleted\"");
+	}
 }
 
 void Inbox::message(){
@@ -68,11 +90,12 @@ void Inbox::message(){
 	
 	system("clear");
 	
-	cout << "\n\n\n\n\n\n\nPrepare to write email to " << userEmail << "from " << sndEmail << endl;
+	cout << "\n\n\n\n\n\n\nPrepare to write email to  " << userEmail << "  from  " << sndEmail;
+	
 	
 	system("sleep 2");
 	system("clear");
-	//	nano msg
+	
 	system("nano tmpMsg");
 	
 	char toSys[2048];
