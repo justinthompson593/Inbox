@@ -27,6 +27,7 @@ public:
 	
 	void pushChanges();
 	void message();
+	void getMessages();
 	
 };
 

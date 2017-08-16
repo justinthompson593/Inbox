@@ -43,6 +43,13 @@ bool Inbox::checkContactsForEmailAddress(string email){
 }
 
 
+void Inbox::getMessages(){
+	
+	system("mv *.asc Open");
+	system("for f in Open/*.asc; do gpg $f; done");
+	
+	
+}
 
 void Inbox::message(){
 	
@@ -74,11 +81,7 @@ void Inbox::message(){
 	
 	size_t idx = sndEmail.find("@");
 	string emailPref = sndEmail.substr(0,idx);
-//	string emailSuff = sndEmail.substr(idx+1);
-	
-//	cout << "email from " << emailPref << "@" << emailSuff << endl;
-	
-	//	system("thisDate=$(date '+%Y/%m/%d_%H:%M:%S')");
+
 	sprintf(toSys, "mv tmpMsg.asc %s_$(date '+%sY-%sm-%sd_%sH.%sM.%sS').txt.asc", emailPref.c_str(), "%", "%", "%", "%", "%", "%");
 	system(toSys);
 	
@@ -93,18 +96,5 @@ void Inbox::message(){
 		contax.close();
 	}
 	
-	
-	
-	//
-	//	sender="$1"
-	//	outName=""
-	//	for (( i=0; i<${#sender}; i++ )); do
-	//	if [ "${sender:$i:1}" == "@" ]; then
-	//	break
-	//	else
-	//	outName="$outName${sender:$i:1}"
-	//	fi
-	//	done
-
 }
 
