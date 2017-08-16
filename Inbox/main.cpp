@@ -1,3 +1,4 @@
+//#define EMAIL "justinthompson593@gmail.com"
 //
 //  main.cpp
 //  Inbox
@@ -12,15 +13,18 @@
 using namespace std;
 
 
-Inbox In("justinthompson593@gmail.com");
-
+Inbox In(EMAIL);
 
 
 int main(int argc, const char * argv[]) {
 
-	cout << "sup worl?" << endl;
-	
-	In.message();
+	for(int i=0; i<argc; i++){
+		if( strncmp(argv[i], "-m", 2) == 0 ||  strncmp(argv[i], "-msg", 4) == 0 || strncmp(argv[i], "-message", 8) == 0 )
+			In.message();
+		
+		if( strncmp(argv[i], "-g", 2) == 0 || strncmp(argv[i], "-get-msg", 8) == 0 )
+			In.getMessages();
+	}
 
 	return 0;
 }

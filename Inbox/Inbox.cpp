@@ -15,7 +15,7 @@ Inbox::Inbox(string email){
 
 void Inbox::pushChanges(){
 	system("git add -A");
-	system("echo \"Enter a commit message in quotes:\"");
+	system("echo \"Enter a commit message in quotes");
 	system("read usrIn");
 	system("git commit -m \"$usrIn\"");
 	system("git push -u origin master");
