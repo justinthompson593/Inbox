@@ -27,4 +27,6 @@ git commit -m "$cmtMsg"
 
 git push -u origin message
 
+cd ..
 
+rm -rf Inbox
