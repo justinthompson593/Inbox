@@ -1,8 +1,5 @@
 #!/bin/bash
 
-git clone -b message https://github.com/justinthompson593/Inbox.git
-
-cd Inbox
 
 usrEmail=""
 echo "Enter your email address"
@@ -10,6 +7,24 @@ read usrEmail
 
 git config user.email "$usrEmail"
 
-echo "Writing message from $(git config user.email)"
+cd Inbox
 
-echo "Finish writing this script"
+g++ main.cpp Inbox.cpp -o thisMessage
+
+./thisMessage -m
+
+rm thisMessage
+
+cd ..
+
+git add -A
+
+cmtMsg=""
+echo "Enter a commit message in quotes"
+read cmtMsg
+
+git commit -m "$cmtMsg"
+
+git push -u origin message
+
+
