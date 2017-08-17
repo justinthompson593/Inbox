@@ -1,0 +1,13 @@
+#!/bin/bash
+
+git clone -b message https://github.com/justinthompson593/Inbox.git
+
+cd Inbox
+
+usrEmail=""
+echo "Enter your email address"
+read usrEmail
+
+git config user.email "$usrEmail"
+
+echo "Writing message from $(git config user.email)"
