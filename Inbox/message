@@ -11,3 +11,5 @@ read usrEmail
 git config user.email "$usrEmail"
 
 echo "Writing message from $(git config user.email)"
+
+echo "Finish writing this script"
