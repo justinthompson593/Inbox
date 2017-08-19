@@ -87,8 +87,10 @@ void Inbox::message(){
 	
 	system("rm tempEmail");
 	
-	
-	system("clear && echo -e \"\n\n\n\nPrepare to write email to %s from %s\" && sleep 2 && nano tmpMsg");
+	char toSys[2048];
+	sprintf(toSys, "clear && echo -e \"\n\n\n\nPrepare to write email to %s from %s\" && sleep 2 && clear && nano tmpMsg", userEmail.c_str(), sndEmail.c_str());
+	system(toSys);
+//	system("clear && echo -e \"\n\n\n\nPrepare to write email to %s from %s\" && sleep 2 && nano tmpMsg");
 	
 	
 //	system("sleep 2");
@@ -96,7 +98,7 @@ void Inbox::message(){
 	
 //	system("nano tmpMsg");
 	
-	char toSys[2048];
+	
 	sprintf(toSys, "gpg -e -a -u %s -r %s tmpMsg && rm tmpMsg", sndEmail.c_str() , userEmail.c_str());
 	system(toSys);
 	
