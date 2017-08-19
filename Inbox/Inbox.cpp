@@ -88,15 +88,13 @@ void Inbox::message(){
 	system("rm tempEmail");
 	
 	
-	system("clear");
-	
-	cout << "\n\n\n\n\n\n\nPrepare to write email to  " << userEmail << "  from  " << sndEmail;
+	system("clear && echo -e \"\n\n\n\nPrepare to write email to %s from %s\" && sleep 2 && nano tmpMsg");
 	
 	
-	system("sleep 2");
-	system("clear");
+//	system("sleep 2");
+//	system("clear");
 	
-	system("nano tmpMsg");
+//	system("nano tmpMsg");
 	
 	char toSys[2048];
 	sprintf(toSys, "gpg -e -a -u %s -r %s tmpMsg && rm tmpMsg", sndEmail.c_str() , userEmail.c_str());
